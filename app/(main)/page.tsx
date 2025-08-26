@@ -212,7 +212,7 @@ export default function Home() {
                       required
                       name="prompt"
                       rows={1}
-                      className="peer absolute inset-0 w-full resize-none bg-transparent p-3 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-gray-100 focus-visible:outline-none disabled:opacity-50"
+                      className="peer absolute inset-0 w-full resize-none bg-transparent p-3 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-gray-100 focus-visible:outline-none disabled:opacity-50 transition-colors duration-200"
                       value={prompt}
                       onChange={(e) => setPrompt(e.target.value)}
                       onKeyDown={(event) => {

@@ -2,6 +2,7 @@
 
 import { createMessage } from "@/app/(main)/actions";
 import LogoSmall from "@/components/icons/logo-small";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { splitByFirstCodeFence } from "@/lib/utils";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -90,14 +91,17 @@ export default function PageClient({ chat }: { chat: Chat }) {
   }, [chat.id, router, streamPromise, context]);
 
   return (
-    <div className="h-dvh">
+    <div className="h-dvh chat-bg">
       <div className="flex h-full">
         <div className="mx-auto flex w-full shrink-0 flex-col overflow-hidden lg:w-1/2">
-          <div className="flex items-center gap-4 px-4 py-4">
-            <Link href="/">
-              <LogoSmall />
-            </Link>
-            <p className="italic text-gray-500">{chat.title}</p>
+          <div className="flex items-center justify-between px-4 py-4 border-b border-gray-200 dark:border-gray-700">
+            <div className="flex items-center gap-4">
+              <Link href="/" className="hover:opacity-80 transition-opacity">
+                <LogoSmall />
+              </Link>
+              <p className="italic text-gray-500 dark:text-gray-400">{chat.title}</p>
+            </div>
+            <ThemeToggle />
           </div>
 
           <ChatLog

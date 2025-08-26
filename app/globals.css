@@ -60,6 +60,18 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
+    
+    /* Chat-specific variables */
+    --chat-background: 0 0% 98%;
+    --chat-user-message: 0 0% 100%;
+    --chat-user-text: 0 0% 20%;
+    --chat-assistant-background: 0 0% 100%;
+    --chat-assistant-text: 0 0% 15%;
+    --chat-assistant-prose: 0 0% 10%;
+    --chat-button-background: 0 0% 96%;
+    --chat-button-hover: 0 0% 92%;
+    --chat-button-active: 0 0% 100%;
+    --chat-border: 0 0% 85%;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -86,6 +98,18 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
+    
+    /* Dark mode chat-specific variables */
+    --chat-background: 0 0% 7%;
+    --chat-user-message: 0 0% 12%;
+    --chat-user-text: 0 0% 85%;
+    --chat-assistant-background: 0 0% 9%;
+    --chat-assistant-text: 0 0% 92%;
+    --chat-assistant-prose: 0 0% 95%;
+    --chat-button-background: 0 0% 15%;
+    --chat-button-hover: 0 0% 20%;
+    --chat-button-active: 0 0% 12%;
+    --chat-border: 0 0% 25%;
   }
 }
 
@@ -104,6 +128,39 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Chat theme utilities */
+  .chat-bg {
+    background-color: hsl(var(--chat-background));
+  }
+  .chat-user-message {
+    background-color: hsl(var(--chat-user-message));
+    color: hsl(var(--chat-user-text));
+  }
+  .chat-assistant-bg {
+    background-color: hsl(var(--chat-assistant-background));
+  }
+  .chat-assistant-text {
+    color: hsl(var(--chat-assistant-text));
+  }
+  .chat-assistant-prose {
+    color: hsl(var(--chat-assistant-prose));
+  }
+  .chat-button {
+    background-color: hsl(var(--chat-button-background));
+    border-color: hsl(var(--chat-border));
+  }
+  .chat-button:hover {
+    background-color: hsl(var(--chat-button-hover));
+  }
+  .chat-button-active {
+    background-color: hsl(var(--chat-button-active));
+  }
+  .chat-border {
+    border-color: hsl(var(--chat-border));
   }
 }
 

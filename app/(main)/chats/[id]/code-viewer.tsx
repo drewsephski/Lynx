@@ -160,7 +160,7 @@ export default function CodeViewer({
         <div className="inline-flex items-center gap-2.5 text-sm">
           <Share message={message && !streamApp ? message : undefined} />
           <button
-            className="inline-flex items-center gap-1 rounded border border-gray-300 px-1.5 py-0.5 text-sm text-gray-600 transition enabled:hover:bg-white disabled:opacity-50"
+            className="inline-flex items-center gap-1 rounded border border-gray-300 dark:border-gray-600 px-1.5 py-0.5 text-sm text-gray-600 dark:text-white transition enabled:hover:bg-white dark:enabled:hover:bg-gray-700 disabled:opacity-50"
             onClick={() => setRefresh((r) => r + 1)}
           >
             <RefreshIcon className="size-3" />

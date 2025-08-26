@@ -71,10 +71,10 @@ export default function ChatBox({
         }}
       >
         <fieldset className="w-full" disabled={disabled}>
-          <div className="relative flex rounded-lg border-4 border-gray-300 bg-white">
+          <div className="relative flex rounded-lg border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 shadow-sm">
             <div className="relative w-full">
-              <div className="w-full p-2">
-                <p className="invisible min-h-[48px] w-full whitespace-pre-wrap">
+              <div className="w-full p-3">
+                <p className="invisible min-h-[48px] w-full whitespace-pre-wrap text-gray-900 dark:text-gray-100">
                   {textareaResizePrompt}
                 </p>
               </div>
@@ -86,7 +86,7 @@ export default function ChatBox({
                 onChange={(e) => setPrompt(e.target.value)}
                 required
                 name="prompt"
-                className="peer absolute inset-0 w-full resize-none bg-transparent p-2 placeholder-gray-500 focus:outline-none disabled:opacity-50"
+                className="peer absolute inset-0 w-full resize-none bg-transparent p-3 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-gray-100 focus:outline-none disabled:opacity-50"
                 onKeyDown={(event) => {
                   if (event.key === "Enter" && !event.shiftKey) {
                     event.preventDefault();
@@ -97,13 +97,13 @@ export default function ChatBox({
                 }}
               />
             </div>
-            <div className="pointer-events-none absolute inset-0 rounded peer-focus:outline peer-focus:outline-offset-0 peer-focus:outline-blue-500" />
+            <div className="pointer-events-none absolute inset-0 rounded-lg peer-focus:ring-2 peer-focus:ring-blue-500 peer-focus:ring-offset-2 peer-focus:ring-offset-white dark:peer-focus:ring-offset-gray-800" />
 
-            <div className="absolute bottom-1.5 right-1.5 flex has-[:disabled]:opacity-50">
-              <div className="pointer-events-none absolute inset-0 -bottom-[1px] rounded bg-blue-700" />
+            <div className="absolute bottom-2 right-2 flex has-[:disabled]:opacity-50">
+              <div className="pointer-events-none absolute inset-0 -bottom-[1px] rounded bg-blue-600 dark:bg-blue-500" />
 
               <button
-                className="relative inline-flex size-6 items-center justify-center rounded bg-blue-500 font-medium text-white shadow-lg outline-blue-300 hover:bg-blue-500/75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                className="relative inline-flex size-8 items-center justify-center rounded bg-blue-500 dark:bg-blue-600 font-medium text-white shadow-lg hover:bg-blue-600 dark:hover:bg-blue-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500 transition-colors duration-200"
                 type="submit"
               >
                 <Spinner loading={disabled}>

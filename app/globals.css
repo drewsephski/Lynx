@@ -106,3 +106,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Mouse tracking blob effect */
+@layer utilities {
+  .mouse-tracker-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  /* Ensure dropdowns and modals don't interfere with mouse tracking */
+  [data-radix-popper-content-wrapper] {
+    z-index: 50;
+  }
+  
+  /* Smooth cursor movement */
+  * {
+    cursor: inherit;
+  }
+}

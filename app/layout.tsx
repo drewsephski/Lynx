@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import PlausibleProvider from "next-plausible";
+import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 
-let title = "Llama Coder – AI Code Generator";
-let description = "Generate your next app with Llama 3.1 405B";
-let url = "https://llamacoder.io/";
-let ogimage = "https://llamacoder.io/og-image.png";
-let sitename = "llamacoder.io";
+let title = "Lynx – AI Code Generator";
+let description = "Generate your next app with lightning-fast AI. Powered by Llama 3.1 405B";
+let url = "https://lynx.ai/";
+let ogimage = "https://lynx.ai/og-image.png";
+let sitename = "lynx.ai";
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -38,12 +39,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full" suppressHydrationWarning>
       <head>
-        <PlausibleProvider domain="llamacoder.io" />
+        <PlausibleProvider domain="lynx.ai" />
       </head>
-
-      {children}
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }

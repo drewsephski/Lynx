@@ -1,0 +1,55 @@
+import React from 'react';
+
+interface LynxIconProps {
+  className?: string;
+  size?: number;
+}
+
+export default function LynxIcon({ className = "", size = 24 }: LynxIconProps) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+    >
+      {/* Lynx head silhouette with pointed ears */}
+      <path
+        d="M4 28C4 28 2 24 2 20C2 16 4 12 8 10C10 9 12 8 14 8C16 8 18 9 20 10C24 12 26 16 26 20C26 24 24 28 24 28"
+        fill="url(#gradient1)"
+      />
+      
+      {/* Left ear tuft */}
+      <path
+        d="M8 10L6 4L10 6L8 10Z"
+        fill="url(#gradient2)"
+      />
+      
+      {/* Right ear tuft */}
+      <path
+        d="M20 10L22 4L18 6L20 10Z"
+        fill="url(#gradient2)"
+      />
+      
+      {/* Eyes */}
+      <circle cx="11" cy="16" r="1.5" fill="#60A5FA" />
+      <circle cx="17" cy="16" r="1.5" fill="#60A5FA" />
+      
+      {/* Gradient definitions */}
+      <defs>
+        <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#3B82F6" />
+          <stop offset="50%" stopColor="#1D4ED8" />
+          <stop offset="100%" stopColor="#1E40AF" />
+        </linearGradient>
+        
+        <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#60A5FA" />
+          <stop offset="100%" stopColor="#3B82F6" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}

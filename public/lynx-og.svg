@@ -1,0 +1,48 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Main content container -->
+  <g transform="translate(600, 315)">
+    <!-- Lynx head silhouette (scaled up) -->
+    <g transform="translate(-60, -40) scale(3)">
+      <path d="M8 32C8 32 6 28 6 24C6 20 8 16 12 14C14 13 16 12 18 12C20 12 22 13 24 14C28 16 30 20 30 24C30 28 28 32 28 32" fill="url(#gradient1)"/>
+      
+      <!-- Left ear tuft -->
+      <path d="M12 14L10 8L14 10L12 14Z" fill="url(#gradient2)"/>
+      
+      <!-- Right ear tuft -->
+      <path d="M24 14L26 8L22 10L24 14Z" fill="url(#gradient2)"/>
+      
+      <!-- Eyes -->
+      <circle cx="15" cy="20" r="1.5" fill="#60A5FA"/>
+      <circle cx="21" cy="20" r="1.5" fill="#60A5FA"/>
+    </g>
+    
+    <!-- LYNX text (large) -->
+    <text x="0" y="80" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="white" letter-spacing="4px">LYNX</text>
+    
+    <!-- Tagline -->
+    <text x="0" y="120" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="400" fill="#E5E7EB" letter-spacing="1px">Lightning-fast AI code generation</text>
+  </g>
+  
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="50%" stop-color="#1E40AF"/>
+      <stop offset="100%" stop-color="#1D4ED8"/>
+    </linearGradient>
+    
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="50%" stop-color="#1D4ED8"/>
+      <stop offset="100%" stop-color="#1E40AF"/>
+    </linearGradient>
+    
+    <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#3B82F6"/>
+    </linearGradient>
+  </defs>
+</svg>

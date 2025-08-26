@@ -110,7 +110,7 @@ function AssistantMessage({
                 </div>
               </button>
             </div>
-          ) : message ? (
+          ) : part.type === "first-code-fence" && part.filename && message ? (
             <div className="my-4">
               <button
                 className={`${isActive ? "chat-button-active border-blue-500 shadow-md" : "chat-button hover:shadow-sm"} inline-flex w-full items-center gap-2 rounded-lg border-2 p-2 transition-all duration-200`}
@@ -138,7 +138,7 @@ function AssistantMessage({
                 </div>
               </button>
             </div>
-          ) : (
+          ) : part.type === "first-code-fence" && part.filename ? (
             <div className="my-4">
               <button
                 className="chat-button inline-flex w-full items-center gap-2 rounded-lg border-2 p-2 opacity-75"
@@ -164,7 +164,7 @@ function AssistantMessage({
                 </div>
               </button>
             </div>
-          )}
+          ) : null}
         </div>
       ))}
     </div>

@@ -205,6 +205,7 @@ function Scene() {
 export const DotScreenShader = () => {
   return (
     <Canvas
+      className="h-svh w-full"
       style={{ pointerEvents: 'none' }}
       gl={{
         antialias: true,

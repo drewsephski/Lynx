@@ -21,6 +21,7 @@ export async function generateMetadata({
     notFound();
   }
 
+  // Use the newer approach with direct image generation instead of API route
   let searchParams = new URLSearchParams();
   searchParams.set("prompt", prompt);
 
@@ -28,12 +29,12 @@ export async function generateMetadata({
     title: "An app generated on LlamaCoder.io",
     description: `Prompt: ${generatedApp?.prompt}`,
     openGraph: {
-      images: [`/api/og?${searchParams}`],
+      images: [`/share/${(await params).id}/opengraph-image?${searchParams}`],
     },
     twitter: {
       title: "An app generated on LlamaCoder.io",
       card: "summary_large_image",
-      images: [`/api/og?${searchParams}`],
+      images: [`/share/${(await params).id}/opengraph-image?${searchParams}`],
     },
   };
 }

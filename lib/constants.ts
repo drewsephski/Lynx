@@ -1,12 +1,4 @@
 export const MODELS = [
-  // {
-  //   label: "Kimi K2",
-  //   value: "moonshotai/Kimi-K2-Instruct",
-  // },
-  {
-    label: "Qwen 3 Coder",
-    value: "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
-  },
   {
     label: "GLM 4.5 Air",
     value: "zai-org/GLM-4.5-Air-FP8",
@@ -42,11 +34,6 @@ export const SUGGESTED_PROMPTS = [
     description:
       "Make me a blog app that has a few blogs there for people to read. Users can click into the blogs and read them, then go back to the homepage to see more.",
   },
-  // {
-  //   title: "Recipe site",
-  //   description:
-  //     "Make me a site that has easy to make recipes in a grid that you can click into and see the full recipe. Also make it possible for me to add my own",
-  // },
   {
     title: "Flashcard app",
     description:

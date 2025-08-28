@@ -50,7 +50,7 @@ export function PromptForm() {
 
   return (
     <form
-      className="relative w-full max-w-2xl pt-6 lg:pt-12"
+      className="relative w-full max-w-2xl px-4 pt-4 sm:pt-6 lg:pt-8 mx-auto"
       action={async (formData) => {
         startTransition(async () => {
           const { prompt, model, quality } = Object.fromEntries(formData);
@@ -87,7 +87,7 @@ export function PromptForm() {
       }}
     >
       <Fieldset>
-        <div className="relative flex w-full max-w-2xl rounded-xl border-4 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 pb-10">
+        <div className="relative flex w-full rounded-xl border-2 sm:border-3 md:border-4 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 pb-6 sm:pb-8 md:pb-10">
           <div className="w-full">
             <ScreenshotPreview
               screenshotUrl={screenshotUrl}
@@ -97,7 +97,7 @@ export function PromptForm() {
               fileInputRef={fileInputRef}
             />
             <div className="relative">
-              <div className="p-3">
+              <div className="p-2 sm:p-3">
                 <p className="invisible w-full whitespace-pre-wrap">
                   {textareaResizePrompt}
                 </p>
@@ -107,7 +107,7 @@ export function PromptForm() {
                 required
                 name="prompt"
                 rows={1}
-                className="peer absolute inset-0 w-full resize-none bg-transparent p-3 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-gray-100 focus-visible:outline-none disabled:opacity-50 transition-colors duration-200"
+                className="w-full min-h-[80px] sm:min-h-[100px] resize-none border-0 bg-transparent p-0 text-sm sm:text-base text-gray-900 placeholder:text-gray-400 focus:ring-0 dark:text-white sm:leading-6 focus:outline-none disabled:opacity-50 transition-colors duration-200"
                 value={prompt}
                 onChange={(e) => setPrompt(e.target.value)}
                 onKeyDown={(event) => {
@@ -122,7 +122,7 @@ export function PromptForm() {
             </div>
           </div>
           <div className="absolute bottom-2 left-2 right-2.5 flex items-center justify-between">
-            <div className="flex items-center gap-3">
+            <div className="mt-2 flex flex-wrap items-center justify-between gap-2">
               <ModelSelector model={model} setModel={setModel} />
 
               <div className="h-4 w-px bg-gray-200 max-sm:hidden" />
